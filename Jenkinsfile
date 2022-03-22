@@ -11,13 +11,13 @@ pipeline {
                 git 'https://github.com/nishanthkumarpathi/socgen23mar22.git' 
             }
         } 
-   stage('Building our image') { 
+        stage('Building our image') { 
             steps { 
                 script { 
                     dockerImage = docker.build registry + ":$BUILD_NUMBER" 
                 }
             } 
-   stage('Deploy our image') { 
+        stage('Deploy our image') { 
             steps { 
                 script { 
                     docker.withRegistry( '', registryCredential ) { 
