@@ -8,7 +8,7 @@ pipeline {
     stages { 
         stage('Cloning our Git') { 
             steps { 
-                git 'https://github.com/nishanthkumarpathi/socgen23mar22.git' 
+                git branch:'main', url: 'https://github.com/nishanthkumarpathi/socgen23mar22.git' 
             }
         } 
         stage('Building our image') { 
